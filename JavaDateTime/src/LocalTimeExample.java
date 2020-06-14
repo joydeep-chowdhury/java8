@@ -1,5 +1,6 @@
 import java.time.LocalTime;
 import java.time.temporal.ChronoField;
+import java.time.temporal.ChronoUnit;
 
 public class LocalTimeExample
    {
@@ -15,5 +16,11 @@ public class LocalTimeExample
     	  System.out.println(localTime3.getMinute());
     	  System.out.println(localTime3.get(ChronoField.CLOCK_HOUR_OF_DAY));
     	  System.out.println(localTime3.toSecondOfDay());
+    	  System.out.println(localTime3.minusHours(5));
+    	  System.out.println(localTime3.minus(2,ChronoUnit.HOURS));
+    	  System.out.println(localTime3.with(LocalTime.MIDNIGHT));
+    	  System.out.println(localTime3.with(ChronoField.HOUR_OF_DAY, 13));
+    	  System.out.println(localTime3.plusMinutes(5));
+    	  System.out.println(localTime3.withHour(11));
       }
    }
